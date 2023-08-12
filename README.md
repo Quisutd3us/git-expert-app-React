@@ -1,3 +1,5 @@
+This Proyect is React based App , that retrieve 10 gifts from API giphy on base a submit category in a component Form
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
