@@ -1,14 +1,15 @@
 import {useState} from 'react';
 import PropTypes from 'prop-types';
 
-const SearchCategory = ({setCategories}) => {
+const SearchCategory = ({onNewCategory}) => {
   /*define state for category*/
   const [category, setCategory] = useState('')
   /*add Category*/
   const handleSubmitCategory = (e) => {
     e.preventDefault()
-    setCategories(categories => [category,...categories])
+
     setCategory('')
+    onNewCategory(category)
   }
   const handleInputCategory = (e) => {
     setCategory(e.target.value)
@@ -25,18 +26,17 @@ const SearchCategory = ({setCategories}) => {
               type={"text"}
               id={"inputCategory"}
               name={"inputCategory"}
-              placeholder={'Search Gifs'}
+              placeholder={'Search Gifs and press ENTER'}
               required={true}
               minLength={3}
               maxLength={18}/>
-          <button>Add Category</button>
         </form>
       </div>
   );
 };
 
 SearchCategory.propTypes = {
-  setCategories: PropTypes.func
+  onNewCategory: PropTypes.func
 };
 
 export default SearchCategory;
