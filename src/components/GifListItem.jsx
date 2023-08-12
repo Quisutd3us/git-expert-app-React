@@ -14,8 +14,8 @@ const GifListItem = ({title,url}) => {
 };
 
 GifListItem.propTypes = {
-  title:PropTypes.string,
-  url:PropTypes.string
+  title:PropTypes.string.isRequired,
+  url:PropTypes.string.isRequired
 };
 
 export default GifListItem;
