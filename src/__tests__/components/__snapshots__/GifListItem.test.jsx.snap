@@ -10,7 +10,7 @@ exports[`Suite Test For GiftListItem Component Snapshot 1`] = `
       >
         <img
           alt="This a title"
-          src="This is a url"
+          src="http://testing-gif/saitam.jpg"
         />
         <p>
           This a title
@@ -24,7 +24,7 @@ exports[`Suite Test For GiftListItem Component Snapshot 1`] = `
     >
       <img
         alt="This a title"
-        src="This is a url"
+        src="http://testing-gif/saitam.jpg"
       />
       <p>
         This a title

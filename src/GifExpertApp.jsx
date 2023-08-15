@@ -5,7 +5,7 @@ import GifList from "./components/GifList.jsx";
 
 /*import helper functions*/
 
-const GitExpertApp = () => {
+const GifExpertApp = () => {
 
   const [message, setMessage] = useState('')
   /*define state for GIFS categories*/
@@ -21,7 +21,6 @@ const GitExpertApp = () => {
     setMessage('')
   }
 
-
   return (
       <>
         {/*title*/}
@@ -31,22 +30,25 @@ const GitExpertApp = () => {
             onNewCategory={(value) => onAddCategory(value)}
         />
         {/*Rendering git list*/}
-          {
-            categories.map(category =>
-                (
-                    <GifList
-                        key={category}
-                        category={category}
-                    />
-                )
-            )
-          }
+        {
+          categories.map(category =>
+              (
+                  <GifList
+                      key={category}
+                      category={category}
+                  />
+              )
+          )
+        }
         {/*Messages*/}
         {
-            message &&
-            (
-                <div>{message}</div>
-            )
+          message ?
+              (
+                  <h5>{message}</h5>
+              ) :
+              (
+                  <h5>{''}</h5>
+              )
         }
 
       </>
@@ -54,4 +56,4 @@ const GitExpertApp = () => {
 };
 
 
-export default GitExpertApp;
+export default GifExpertApp;

@@ -18,6 +18,7 @@ const SearchCategory = ({onNewCategory}) => {
       <div>
         <form
             onSubmit={handleSubmitCategory}
+            aria-label="testingHook"
         >
           <label htmlFor="inputCategory">Type the new Category (4 to 8 characters):</label>
           <input
@@ -36,7 +37,7 @@ const SearchCategory = ({onNewCategory}) => {
 };
 
 SearchCategory.propTypes = {
-  onNewCategory: PropTypes.func
+  onNewCategory: PropTypes.func.isRequired
 };
 
 export default SearchCategory;
